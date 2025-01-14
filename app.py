@@ -105,7 +105,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 if uploaded_file is not None:
     # Display the uploaded image
     image = cv2.imdecode(np.frombuffer(uploaded_file.read(), np.uint8), cv2.IMREAD_COLOR)
-    st.image(image, channels="BGR", caption='Uploaded Image', use_column_width=True)
+    st.image(image, channels="BGR", caption='Uploaded Image', use_container_width=True)
 
     # Reset the uploaded file pointer for processing
     uploaded_file.seek(0)
